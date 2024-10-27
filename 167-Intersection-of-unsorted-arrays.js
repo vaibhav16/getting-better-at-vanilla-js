@@ -16,3 +16,11 @@
 // you can modify the arrays
 // you can return the items in any order, but without duplicates.
 // This is an easy problem, What is the time & space complexity of your approach?
+
+function getIntersection (arr1,arr2){
+    let map = new Map();
+    let set = new Set();
+    for(let i of arr1){map[i]=true};
+    for(let i of arr2){if(map[i]){set.add(i)}};
+    return [...set];
+}
